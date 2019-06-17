@@ -1,4 +1,4 @@
-<div ng-style="{'background-color':(isHover ? config.BackgroundColorMouseOver:config.BackgroundColor), 'border-radius':'config.BorderRadius'+'px'}" ng-mouseenter="isHover=true;" ng-mouseleave="isHover=false;">
+<div ng-style="{'background-color':(isHover ? config.BackgroundColorMouseOver:config.BackgroundColor), 'border-radius':config.BorderRadius+'px'}" ng-mouseenter="isHover=true;" ng-mouseleave="isHover=false;">
     <h3>{{Label}}, {{Units}}</h3>
     <div ng-repeat="item in Values" ng-show="item.Value >70">
         {{item.Time}}, {{item.Value | number:config.DisplayDigits}}
