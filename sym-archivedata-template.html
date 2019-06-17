@@ -1,0 +1,9 @@
+<div ng-style="{'background-color':(isHover ? config.BackgroundColorMouseOver:config.BackgroundColor), 'border-radius':'config.BorderRadius'+'px'}" ng-mouseenter="isHover=true;" ng-mouseleave="isHover=false;">
+    <h3>{{Label}}, {{Units}}</h3>
+    <div ng-repeat="item in Values" ng-show="item.Value >70">
+        {{item.Time}}, {{item.Value | number:config.DisplayDigits}}
+    </div>
+    <h3>Total Records: {{Values.length}}</h3>
+   <!-- <div>{{3.50 | currency}}</div>
+    <div>{{'Hello World' |uppercase | limitTo: 7}}</div> -->
+</div>
